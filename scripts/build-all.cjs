@@ -21,4 +21,15 @@ run('npm run build', 'app');
 fs.rmSync(dist, { recursive: true, force: true });
 fs.cpSync(path.join(root, 'landing', 'dist'), dist, { recursive: true });
 fs.cpSync(path.join(root, 'app', 'dist'), path.join(dist, 'app'), { recursive: true });
+
+// La app es de una sola página: cada ruta interna debe devolver su index.html para que React Router la resuelva.
+// Se dejan copias físicas por ruta (en vez de depender de una regla de redirección del hosting).
+const rutasApp = ['login', 'marketplace', 'marketplace/catalogo', 'marketplace/carrito', 'marketplace/confirmar'];
+const indiceApp = path.join(dist, 'app', 'index.html');
+for (const ruta of rutasApp) {
+  const carpeta = path.join(dist, 'app', ruta);
+  fs.mkdirSync(carpeta, { recursive: true });
+  fs.copyFileSync(indiceApp, path.join(carpeta, 'index.html'));
+}
+
 console.log('✓ sitio listo en', dist);
