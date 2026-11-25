@@ -1,0 +1,23 @@
+---
+import Bi from './Bi.astro';
+import C from '../data/content.json';
+---
+<section class="sec sec-faq" id="preguntas">
+  <div class="wrap faq-in">
+    <header class="sec-h" data-reveal>
+      <p class="kick">FAQ</p>
+      <h2><Bi f={(X) => X.faqTitle} /></h2>
+    </header>
+    <div class="faq-list">
+      {C.es.faq.map((_, i) => (
+        <article class:list={['faq-item', { open: i === 0 }]} data-reveal style={`--i:${i}`}>
+          <button class="faq-q" type="button" aria-expanded={i === 0 ? 'true' : 'false'} aria-controls={`faq-${i}`}>
+            <span class="faq-t"><Bi f={(X) => X.faq[i][0]} /></span>
+            <span class="faq-ic" aria-hidden="true"></span>
+          </button>
+          <div class="faq-a" id={`faq-${i}`}><div><p><Bi f={(X) => X.faq[i][1]} /></p></div></div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

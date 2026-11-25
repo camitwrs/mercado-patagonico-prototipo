@@ -1,0 +1,20 @@
+---
+// Decoración de fondo, fluida y suave. kind: topo | wave | ridge | crystal
+import { topoSVG, waveSVG, crystalSVG, ridgeSoftSVG } from '../lib/art.js';
+const { kind, op = 1, pos = '', size = 0 } = Astro.props;
+const none = (s) => s.replace('<svg', '<svg preserveAspectRatio="none"');
+const html = {
+  topo: () => none(topoSVG(1440, 600, 'currentColor', 1)),
+  wave: () => none(waveSVG(1440, 140)),
+  ridge: () => [ridgeSoftSVG(1440, 190, false), ridgeSoftSVG(1440, 190, true)],
+  crystal: () => crystalSVG(400, 240),
+}[kind]();
+---
+{kind === 'ridge' ? (
+  <>
+    <div class={`deco deco-ridge lt ${pos}`} aria-hidden="true" style={`--op:${op}`} set:html={html[0]} />
+    <div class={`deco deco-ridge dk ${pos}`} aria-hidden="true" style={`--op:${op}`} set:html={html[1]} />
+  </>
+) : (
+  <div class={`deco deco-${kind} ${pos}`} aria-hidden="true" style={`--op:${op};--w:${size}px`} set:html={html} />
+)}

@@ -1,0 +1,858 @@
+{
+  "es": {
+    "nav": [
+      "Qué es",
+      "Cómo funciona",
+      "Para quién",
+      "Preguntas"
+    ],
+    "contact": "Contacto",
+    "login": "Ingresar",
+    "body": "Enfoca a tu equipo en el huésped. Nosotros integramos compras, proveedores y logística para hoteles, lodges y operadores gastronómicos de Magallanes.",
+    "h1": "El mercado de Magallanes, para tu cocina.",
+    "h2": "Tu cocina, siempre abastecida.",
+    "h3": "Lo que en el sur no hay, directo a tu cocina.",
+    "heroCta": "Descubre cómo funciona",
+    "h5": "Lo que falta en el sur, directo a tu bodega.",
+    "h6": "Todo lo que el sur debería tener, resuelto desde un solo lugar.",
+    "eyebrow": "Abastecimiento hotelero y gastronómico",
+    "dispTitle": "Despacho",
+    "dispFrom": "Origen",
+    "dispTo": "Destino",
+    "dispFor": "Para",
+    "boardTitle": "Hoy en el mercado",
+    "boardCity": "Magallanes",
+    "boardRows": [
+      [
+        "Abastecimiento",
+        "Para HORECA"
+      ],
+      [
+        "Productos",
+        "Los que el sur no tiene"
+      ],
+      [
+        "Pedidos",
+        "En la plataforma"
+      ]
+    ],
+    "gar": [
+      [
+        "Un solo operador",
+        "Múltiples proveedores y orígenes, compras consolidadas y una sola coordinación para tu abastecimiento."
+      ],
+      [
+        "Cadena de frío y trazabilidad",
+        "Control de temperatura según la categoría y gestión por lote y vencimiento, desde el origen hasta tu recepción."
+      ],
+      [
+        "Entrega hasta la última milla",
+        "Rutas y ventanas de entrega planificadas hacia tu destino en Magallanes."
+      ]
+    ],
+    "queTitle": "Un solo operador. Múltiples proveedores.",
+    "que1": "Mercado Patagónico reúne en un solo lugar el abastecimiento de hoteles, lodges, restaurantes y operadores turísticos de Magallanes. Trabajamos con proveedores de Santiago y Puerto Montt y con productores regionales, consolidamos las cargas y las entregamos hasta tu puerta.",
+    "que2": "Ingresa a la plataforma con el usuario que crea nuestro equipo. Revisa el catálogo, haz tus pedidos y sigue cada uno.",
+    "tags": [
+      "Hoteles",
+      "Lodges",
+      "Restaurantes",
+      "Operadores turísticos",
+      "Casinos"
+    ],
+    "stepsTitle1": "Entra al mercado en cuatro pasos",
+    "stepsTitle2": "Del acceso a tu cocina",
+    "step": "Paso",
+    "no": "N.º ",
+    "steps": [
+      [
+        "Nos contactas",
+        "Nos cuentas de tu operación en un formulario corto."
+      ],
+      [
+        "Levantamos tu operación",
+        "Revisamos categorías, consumos, frecuencias y tus proveedores actuales."
+      ],
+      [
+        "Creamos tu cuenta",
+        "Un administrador de nuestro equipo crea tu usuario. No hay registro propio. Con él ingresas a la plataforma, ves el catálogo y haces tus pedidos."
+      ],
+      [
+        "Recibes y sigues tu pedido",
+        "Entrega coordinada hasta tu puerta, con seguimiento y trazabilidad de cada pedido."
+      ]
+    ],
+    "paraTitle": "Para el canal HORECA",
+    "paraSub": "Hoteles, lodges, restaurantes, operadores turísticos y casinos de Magallanes: ordena tu abastecimiento.",
+    "paraBtn": "Contáctanos",
+    "clientes": [
+      "Hoteles urbanos: ordena tu compra recurrente",
+      "Lodges remotos: protege la continuidad del abastecimiento",
+      "Cadenas y grupos: gestiona con una mirada común",
+      "Restaurantes, operadores turísticos y casinos: menos proveedores que coordinar"
+    ],
+    "faqTitle": "Preguntas frecuentes",
+    "faq": [
+      [
+        "¿Quién puede usar Mercado Patagónico?",
+        "Hoteles, lodges, restaurantes, operadores turísticos y casinos de Magallanes. Contáctanos y revisamos tu caso."
+      ],
+      [
+        "¿Cómo obtengo mi cuenta?",
+        "No hay registro propio. Un administrador de nuestro equipo crea tu cuenta cuando nos contactas. Con ese usuario ingresas con el botón Ingresar."
+      ],
+      [
+        "¿Es para reservar una habitación o una mesa?",
+        "No. Mercado Patagónico es para quienes compran y abastecen: hoteles, restaurantes, cafés y caterings que necesitan proveerse de productos. Los pedidos se hacen dentro de la plataforma."
+      ],
+      [
+        "¿Qué abastecen?",
+        "Un catálogo multicategoría: alimentos y bebidas (frescos, secos, congelados y refrigerados), limpieza y operación, y amenities y textiles. El catálogo se ve al ingresar."
+      ]
+    ],
+    "formTitle": "Contáctanos",
+    "fields": [
+      "Nombre y cargo",
+      "Nombre del negocio",
+      "Tipo de negocio",
+      "Correo de trabajo",
+      "Teléfono"
+    ],
+    "send": "Enviar mensaje",
+    "formNote": "Te respondemos por correo. ¿Ya tienes cuenta?",
+    "ctaTitle1": "Ordena tu abastecimiento hoy",
+    "ctaTitle2": "Cuéntanos de tu cocina",
+    "ctaText": "Cuéntanos de tu operación y parte con un piloto acotado y medible. Un administrador de nuestro equipo crea tu cuenta.",
+    "footer": "Mercado Patagónico es un producto de Latitud53.",
+    "photo": "Foto del cliente",
+    "design": "Diseño",
+    "kitchen": "Cocina",
+    "seal": "Directo\nal sur",
+    "t1": {
+      "title": "Tu negocio",
+      "lines": [
+        "Abastecimiento de alimentos",
+        "Pedidos en la plataforma"
+      ]
+    },
+    "t2": {
+      "title": "Para quién",
+      "lines": [
+        "Hoteles",
+        "Restaurantes",
+        "Cafés",
+        "Catering"
+      ]
+    },
+    "t3": {
+      "title": "Lo que falta en el sur",
+      "lines": [
+        "Productos que no hay en la zona",
+        "Directo a tu cocina"
+      ]
+    },
+    "svcTitle": "Qué incluye el servicio",
+    "svcText": "Nos ocupamos de abastecerte con lo que en el sur no se consigue. Los pedidos los haces dentro de la plataforma.",
+    "svcKicker": "Servicio",
+    "svcNo": "Clientes",
+    "svcTicket": "Lo que incluye",
+    "svcRows": [
+      [
+        "Abastecimiento",
+        "Hoteles, restaurantes, cafés y catering"
+      ],
+      [
+        "Productos",
+        "Los que en el sur no se consiguen"
+      ],
+      [
+        "Catálogo",
+        "Se ve al ingresar"
+      ],
+      [
+        "Pedidos",
+        "Dentro de la plataforma"
+      ],
+      [
+        "Acceso",
+        "Clientes con cuenta"
+      ]
+    ],
+    "photos": [
+      [
+        "Pedido recibido",
+        "Cajas recién recibidas en la bodega de un hotel."
+      ],
+      [
+        "Camión de reparto",
+        "Camión de reparto descargando frente a la cocina."
+      ],
+      [
+        "Revisión de la entrega",
+        "Un chef revisando una entrega en la puerta de la cocina."
+      ],
+      [
+        "Bodega ordenada",
+        "Una bodega ordenada, con cajas etiquetadas."
+      ]
+    ],
+    "catsLabel": "Qué abastecemos",
+    "cats": [
+      "Alimentos y bebidas",
+      "Limpieza y operación",
+      "Amenities y textiles"
+    ],
+    "segCards": [
+      [
+        "Hotel urbano",
+        "Ordenar la compra recurrente",
+        "Menos proveedores que coordinar, recepciones más ordenadas y mejor visibilidad."
+      ],
+      [
+        "Lodge remoto",
+        "Proteger la continuidad",
+        "Planificación anticipada, categorías críticas y logística adaptada al destino."
+      ],
+      [
+        "Cadena / grupo",
+        "Gestionar con una mirada común",
+        "Estandarización, control central y comparación entre propiedades."
+      ]
+    ],
+    "segMore": "Abastecemos también a restaurantes, operadores turísticos y casinos de Magallanes.",
+    "probKicker": "El punto de partida",
+    "probTitle": "Deja de perseguir proveedores.",
+    "probSub": "Cuando el abastecimiento falla, el impacto llega a habitaciones, cocina, mantenimiento y servicio. La fragmentación genera un efecto dominó.",
+    "prob": [
+      [
+        "Carga administrativa",
+        "Más pedidos, seguimientos, facturas y recepciones."
+      ],
+      [
+        "Riesgo de quiebres",
+        "Productos críticos que no llegan cuando se necesitan."
+      ],
+      [
+        "Margen erosionado",
+        "Urgencias, menor consolidación y compras reactivas."
+      ],
+      [
+        "Poca visibilidad",
+        "Difícil comparar gasto, precios y desempeño."
+      ]
+    ],
+    "probClose": "La complejidad que hoy administras es justo lo que Mercado Patagónico ordena.",
+    "valKicker": "Propuesta de valor",
+    "valTitle": "Exige un solo operador para todo tu abastecimiento.",
+    "valSub": "Un solo operador. Múltiples proveedores. Una solución integral.",
+    "val": [
+      [
+        "Un solo operador",
+        "Centraliza todo tu abastecimiento en un solo lugar."
+      ],
+      [
+        "Múltiples proveedores y orígenes",
+        "Accede a proveedores de Santiago y Puerto Montt y a productores regionales."
+      ],
+      [
+        "Compras consolidadas",
+        "Agrupa tus pedidos y elimina las recepciones dispersas."
+      ],
+      [
+        "Cadena de frío",
+        "Controla la temperatura según la categoría, de origen a destino."
+      ],
+      [
+        "Entrega hasta la última milla",
+        "Recibe en tu puerta, con rutas y ventanas planificadas."
+      ],
+      [
+        "Trazabilidad integral",
+        "Sigue cada pedido por lote y vencimiento."
+      ]
+    ],
+    "valClose": "Menos complejidad para ti. Más foco en tus huéspedes.",
+    "opKicker": "Cómo operamos",
+    "opTitle": "Del consumo a la entrega, con un flujo visible.",
+    "opSub": "Planificamos, coordinamos y controlamos cada etapa según las condiciones de tu destino.",
+    "ops": [
+      [
+        "Planificar",
+        "Consumo y temporada"
+      ],
+      [
+        "Comprar",
+        "Órdenes coordinadas"
+      ],
+      [
+        "Recibir",
+        "Calidad y lotes"
+      ],
+      [
+        "Consolidar",
+        "Por origen y temperatura"
+      ],
+      [
+        "Despachar",
+        "Ruta y ventana"
+      ]
+    ],
+    "opNotes": [
+      [
+        "Frío",
+        "Control según protocolo"
+      ],
+      [
+        "Trazabilidad",
+        "Lotes y vencimientos"
+      ],
+      [
+        "Respaldo",
+        "Stock crítico evaluado"
+      ]
+    ],
+    "partnersLabel": "Con quién trabajamos",
+    "partners": [
+      "Proveedores de Santiago",
+      "Proveedores de Puerto Montt",
+      "Productores regionales",
+      "Transportistas",
+      "Operadores de frío",
+      "Centros logísticos"
+    ],
+    "lvlKicker": "Niveles de servicio",
+    "lvlTitle": "Parte donde más duele. Escala cuando funciona.",
+    "lvlSub": "Elige el nivel que calza con el volumen y la complejidad de tu operación.",
+    "lvls": [
+      [
+        "Esencial",
+        [
+          "Catálogo estándar",
+          "Proveedores seleccionados",
+          "Entrega programada"
+        ],
+        "Hotel con flujo estable"
+      ],
+      [
+        "Integrado",
+        [
+          "Catálogo personalizado",
+          "Alternativas de proveedores",
+          "Consolidación multitemperatura"
+        ],
+        "Operación compleja"
+      ],
+      [
+        "Gestión total",
+        [
+          "Planificación de demanda",
+          "Stock crítico e inventario",
+          "Análisis periódico"
+        ],
+        "Grupos y lodges"
+      ]
+    ],
+    "relKicker": "Acompañamiento",
+    "relTitle": "Ten a alguien a cargo de tu abastecimiento.",
+    "rel": [
+      [
+        "Ejecutivo de cuenta",
+        "Un interlocutor para tu operación."
+      ],
+      [
+        "Abastecimiento programado",
+        "Define tus frecuencias y ventanas."
+      ],
+      [
+        "Atención centralizada",
+        "Un solo canal para todas tus categorías."
+      ],
+      [
+        "Seguimiento de pedidos",
+        "Sigue cada pedido hasta tu recepción."
+      ],
+      [
+        "Servicio posventa",
+        "Soporte después de cada entrega."
+      ]
+    ],
+    "kpiTitle": "Exige indicadores, no promesas.",
+    "kpiSub": "Acordamos una línea base contigo y damos seguimiento a los resultados.",
+    "kpis": [
+      [
+        "OTIF",
+        "Entregas completas y a tiempo"
+      ],
+      [
+        "Fill rate",
+        "Disponibilidad de líneas críticas"
+      ],
+      [
+        "Exactitud",
+        "Pedido versus entrega"
+      ],
+      [
+        "Frío",
+        "Cumplimiento de temperatura"
+      ],
+      [
+        "Incidencias",
+        "Daños y faltantes"
+      ],
+      [
+        "Eficiencia",
+        "Urgencias y recepciones"
+      ]
+    ],
+    "kpiNote": "Los objetivos y SLA se definen contigo; no se presuponen resultados antes del piloto.",
+    "pilotKicker": "El primer paso",
+    "pilotTitle": "Prueba antes de escalar: parte con un piloto de 90 días.",
+    "pilotSub": "No cambies toda tu operación. Valida categorías, rutas, servicio y oportunidades de eficiencia.",
+    "pilot": [
+      [
+        "Días 1–30",
+        "Diagnóstico",
+        "Gasto, proveedores, consumo y puntos críticos."
+      ],
+      [
+        "Días 31–60",
+        "Piloto",
+        "2–3 categorías, ruta y controles."
+      ],
+      [
+        "Días 61–90",
+        "Evaluación",
+        "KPIs, aprendizajes y decisión de escala."
+      ]
+    ],
+    "pilotClose": "Una prueba acotada. Resultados medibles. Una decisión informada para escalar."
+  },
+  "en": {
+    "nav": [
+      "What it is",
+      "How it works",
+      "Who it's for",
+      "FAQ"
+    ],
+    "contact": "Contact",
+    "login": "Log in",
+    "body": "Keep your team focused on the guest. We bring purchasing, suppliers and logistics together for hotels, lodges and food service operators in Magallanes.",
+    "h1": "The Magallanes market, for your kitchen.",
+    "h2": "Your kitchen, always stocked.",
+    "h3": "What the south lacks, straight to your kitchen.",
+    "heroCta": "Discover how it works",
+    "h5": "What the south lacks, straight to your storeroom.",
+    "h6": "Everything the south should have, solved from a single place.",
+    "eyebrow": "Hospitality and food service supply",
+    "dispTitle": "Dispatch",
+    "dispFrom": "Origin",
+    "dispTo": "Destination",
+    "dispFor": "For",
+    "boardTitle": "Today at the market",
+    "boardCity": "Magallanes",
+    "boardRows": [
+      [
+        "Supply",
+        "For HORECA"
+      ],
+      [
+        "Products",
+        "The ones the south lacks"
+      ],
+      [
+        "Orders",
+        "On the platform"
+      ]
+    ],
+    "gar": [
+      [
+        "A single operator",
+        "Multiple suppliers and origins, consolidated purchasing and one point of coordination for your supply."
+      ],
+      [
+        "Cold chain and traceability",
+        "Temperature control by category and lot and expiry management, from origin to your receiving dock."
+      ],
+      [
+        "Delivery to the last mile",
+        "Planned routes and delivery windows to your destination in Magallanes."
+      ]
+    ],
+    "queTitle": "One operator. Many suppliers.",
+    "que1": "Mercado Patagónico brings the supply of hotels, lodges, restaurants and tour operators in Magallanes into one place. We work with suppliers in Santiago and Puerto Montt and with regional producers, consolidate the loads and deliver them to your door.",
+    "que2": "Log in to the platform with the user our team creates for you. Browse the catalog, place your orders and track each one.",
+    "tags": [
+      "Hotels",
+      "Lodges",
+      "Restaurants",
+      "Tour operators",
+      "Institutional dining"
+    ],
+    "stepsTitle1": "Enter the market in four steps",
+    "stepsTitle2": "From access to your kitchen",
+    "step": "Step",
+    "no": "No. ",
+    "steps": [
+      [
+        "You contact us",
+        "Tell us about your operation in a short form."
+      ],
+      [
+        "We map your operation",
+        "We review categories, consumption, frequencies and your current suppliers."
+      ],
+      [
+        "We create your account",
+        "An administrator on our team creates your user. There is no self-registration. With it you log in to the platform, see the catalog and place your orders."
+      ],
+      [
+        "You receive and track your order",
+        "Coordinated delivery to your door, with tracking and traceability for every order."
+      ]
+    ],
+    "paraTitle": "For the HORECA channel",
+    "paraSub": "Hotels, lodges, restaurants, tour operators and institutional dining in Magallanes: organize your supply.",
+    "paraBtn": "Contact us",
+    "clientes": [
+      "Urban hotels: organize your recurring purchasing",
+      "Remote lodges: protect supply continuity",
+      "Chains and groups: manage with a shared view",
+      "Restaurants, tour operators and institutional dining: fewer suppliers to coordinate"
+    ],
+    "faqTitle": "Frequently asked questions",
+    "faq": [
+      [
+        "Who can use Mercado Patagónico?",
+        "Hotels, lodges, restaurants, tour operators and institutional dining in Magallanes. Contact us and we will review your case."
+      ],
+      [
+        "How do I get my account?",
+        "There is no self-registration. An administrator on our team creates your account when you contact us. With that user, you log in with the Log in button."
+      ],
+      [
+        "Is this for booking a room or a table?",
+        "No. Mercado Patagónico is for those who buy and stock up: hotels, restaurants, cafés and caterers that need to source products. Orders are placed inside the platform."
+      ],
+      [
+        "What do you supply?",
+        "A multi-category catalog: food and beverages (fresh, dry, frozen and chilled), cleaning and operations, and amenities and textiles. The catalog is visible after logging in."
+      ]
+    ],
+    "formTitle": "Contact us",
+    "fields": [
+      "Name and role",
+      "Business name",
+      "Type of business",
+      "Work email",
+      "Phone"
+    ],
+    "send": "Send message",
+    "formNote": "We reply by email. Already have an account?",
+    "ctaTitle1": "Organize your supply today",
+    "ctaTitle2": "Tell us about your kitchen",
+    "ctaText": "Tell us about your operation and start with a focused, measurable pilot. An administrator on our team creates your account.",
+    "footer": "Mercado Patagónico is a product of Latitud53.",
+    "photo": "Client photo",
+    "design": "Design",
+    "kitchen": "Kitchen",
+    "seal": "Straight\nto the south",
+    "t1": {
+      "title": "Your business",
+      "lines": [
+        "Food supply",
+        "Orders on the platform"
+      ]
+    },
+    "t2": {
+      "title": "Who it's for",
+      "lines": [
+        "Hotels",
+        "Restaurants",
+        "Cafés",
+        "Catering"
+      ]
+    },
+    "t3": {
+      "title": "Missing in the south",
+      "lines": [
+        "Products not available locally",
+        "Straight to your kitchen"
+      ]
+    },
+    "svcTitle": "What the service includes",
+    "svcText": "We make sure you get what cannot be found in the south. You place your orders inside the platform.",
+    "svcKicker": "Service",
+    "svcNo": "Customers",
+    "svcTicket": "What is included",
+    "svcRows": [
+      [
+        "Supply",
+        "Hotels, restaurants, cafés and catering"
+      ],
+      [
+        "Products",
+        "The ones the south does not have"
+      ],
+      [
+        "Catalog",
+        "Visible after logging in"
+      ],
+      [
+        "Orders",
+        "Inside the platform"
+      ],
+      [
+        "Access",
+        "Customers with an account"
+      ]
+    ],
+    "photos": [
+      [
+        "Order received",
+        "Boxes just received in a hotel storeroom."
+      ],
+      [
+        "Delivery truck",
+        "A delivery truck unloading in front of the kitchen."
+      ],
+      [
+        "Checking the delivery",
+        "A chef checking a delivery at the kitchen door."
+      ],
+      [
+        "Tidy storeroom",
+        "A tidy storeroom with labelled boxes."
+      ]
+    ],
+    "catsLabel": "What we supply",
+    "cats": [
+      "Food and beverages",
+      "Cleaning and operations",
+      "Amenities and textiles"
+    ],
+    "segCards": [
+      [
+        "Urban hotel",
+        "Organize recurring purchasing",
+        "Fewer suppliers to coordinate, more orderly receiving and better visibility."
+      ],
+      [
+        "Remote lodge",
+        "Protect continuity",
+        "Anticipated planning, critical categories and logistics adapted to the destination."
+      ],
+      [
+        "Chain / group",
+        "Manage with a shared view",
+        "Standardization, central control and comparison across properties."
+      ]
+    ],
+    "segMore": "We also supply restaurants, tour operators and institutional dining in Magallanes.",
+    "probKicker": "The starting point",
+    "probTitle": "Stop chasing suppliers.",
+    "probSub": "When supply fails, the impact reaches rooms, kitchen, maintenance and service. Fragmentation creates a domino effect.",
+    "prob": [
+      [
+        "Administrative load",
+        "More orders, follow-ups, invoices and receptions."
+      ],
+      [
+        "Risk of stock-outs",
+        "Critical products that do not arrive when you need them."
+      ],
+      [
+        "Eroded margin",
+        "Emergencies, less consolidation and reactive purchasing."
+      ],
+      [
+        "Little visibility",
+        "Hard to compare spend, prices and performance."
+      ]
+    ],
+    "probClose": "The complexity you manage today is exactly what Mercado Patagónico puts in order.",
+    "valKicker": "Value proposition",
+    "valTitle": "Demand a single operator for all your supply.",
+    "valSub": "One operator. Multiple suppliers. One integrated solution.",
+    "val": [
+      [
+        "A single operator",
+        "Centralize all your supply in one place."
+      ],
+      [
+        "Multiple suppliers and origins",
+        "Access suppliers from Santiago and Puerto Montt and regional producers."
+      ],
+      [
+        "Consolidated purchasing",
+        "Group your orders and eliminate scattered deliveries."
+      ],
+      [
+        "Cold chain",
+        "Control temperature by category, from origin to destination."
+      ],
+      [
+        "Delivery to the last mile",
+        "Receive at your door, with planned routes and windows."
+      ],
+      [
+        "Full traceability",
+        "Follow every order by lot and expiry."
+      ]
+    ],
+    "valClose": "Less complexity for you. More focus on your guests.",
+    "opKicker": "How we operate",
+    "opTitle": "From consumption to delivery, with a visible flow.",
+    "opSub": "We plan, coordinate and control every stage according to the conditions of your destination.",
+    "ops": [
+      [
+        "Plan",
+        "Consumption and season"
+      ],
+      [
+        "Buy",
+        "Coordinated orders"
+      ],
+      [
+        "Receive",
+        "Quality and lots"
+      ],
+      [
+        "Consolidate",
+        "By origin and temperature"
+      ],
+      [
+        "Dispatch",
+        "Route and window"
+      ]
+    ],
+    "opNotes": [
+      [
+        "Cold",
+        "Control per protocol"
+      ],
+      [
+        "Traceability",
+        "Lots and expiry dates"
+      ],
+      [
+        "Backup",
+        "Critical stock assessed"
+      ]
+    ],
+    "partnersLabel": "Who we work with",
+    "partners": [
+      "Suppliers in Santiago",
+      "Suppliers in Puerto Montt",
+      "Regional producers",
+      "Carriers",
+      "Cold-chain operators",
+      "Logistics centers"
+    ],
+    "lvlKicker": "Service levels",
+    "lvlTitle": "Start where it hurts most. Scale when it works.",
+    "lvlSub": "Choose the level that fits the volume and complexity of your operation.",
+    "lvls": [
+      [
+        "Essential",
+        [
+          "Standard catalog",
+          "Selected suppliers",
+          "Scheduled delivery"
+        ],
+        "Hotel with steady flow"
+      ],
+      [
+        "Integrated",
+        [
+          "Customized catalog",
+          "Alternative suppliers",
+          "Multi-temperature consolidation"
+        ],
+        "Complex operation"
+      ],
+      [
+        "Full management",
+        [
+          "Demand planning",
+          "Critical stock and inventory",
+          "Periodic analysis"
+        ],
+        "Groups and lodges"
+      ]
+    ],
+    "relKicker": "Support",
+    "relTitle": "Have someone in charge of your supply.",
+    "rel": [
+      [
+        "Account executive",
+        "One contact for your operation."
+      ],
+      [
+        "Scheduled supply",
+        "Set your frequencies and windows."
+      ],
+      [
+        "Centralized service",
+        "One channel for all your categories."
+      ],
+      [
+        "Order tracking",
+        "Follow every order until you receive it."
+      ],
+      [
+        "After-sales service",
+        "Support after every delivery."
+      ]
+    ],
+    "kpiTitle": "Demand indicators, not promises.",
+    "kpiSub": "We agree on a baseline with you and track the results.",
+    "kpis": [
+      [
+        "OTIF",
+        "Complete, on-time deliveries"
+      ],
+      [
+        "Fill rate",
+        "Availability of critical lines"
+      ],
+      [
+        "Accuracy",
+        "Order versus delivery"
+      ],
+      [
+        "Cold",
+        "Temperature compliance"
+      ],
+      [
+        "Incidents",
+        "Damage and shortages"
+      ],
+      [
+        "Efficiency",
+        "Emergencies and receptions"
+      ]
+    ],
+    "kpiNote": "Targets and SLAs are defined with you; no results are assumed before the pilot.",
+    "pilotKicker": "The first step",
+    "pilotTitle": "Test before you scale: start with a 90-day pilot.",
+    "pilotSub": "Do not change your whole operation. Validate categories, routes, service and efficiency opportunities.",
+    "pilot": [
+      [
+        "Days 1–30",
+        "Diagnosis",
+        "Spend, suppliers, consumption and critical points."
+      ],
+      [
+        "Days 31–60",
+        "Pilot",
+        "2–3 categories, route and controls."
+      ],
+      [
+        "Days 61–90",
+        "Evaluation",
+        "KPIs, learnings and scale decision."
+      ]
+    ],
+    "pilotClose": "A focused test. Measurable results. An informed decision to scale."
+  }
+}

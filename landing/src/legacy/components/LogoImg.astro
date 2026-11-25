@@ -1,0 +1,9 @@
+---
+// Logo real de Mercado Patagónico (documentacion/Logo Mercado Patagonico.png).
+import { Image } from 'astro:assets';
+import logo from '../assets/logo.png';
+const { w = 150, plate = false } = Astro.props;
+---
+<span class:list={['logo-plate', { plate }]}>
+  <Image class="logo-img" src={logo} width={w * 2} height={Math.round((w * 2 * logo.height) / logo.width)} style={`width:${w}px`} alt="Mercado Patagónico, abastecimiento hotelero y gastronómico" loading="eager" />
+</span>

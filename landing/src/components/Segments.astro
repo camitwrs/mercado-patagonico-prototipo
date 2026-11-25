@@ -1,0 +1,105 @@
+---
+import { Image } from 'astro:assets';
+import Bi from './Bi.astro';
+import Deco from './Deco.astro';
+import hotel from '../assets/seg/hotel.jpg';
+import lodge from '../assets/seg/lodge.jpg';
+import cadena from '../assets/seg/cadena.jpg';
+// Información tomada de las propuestas comerciales por segmento (/documentacion). Solo títulos: el detalle va en la conversación comercial.
+const tabs = [
+  {
+    id: 'urbanos', img: hotel, alt: 'Habitación de hotel con vista al lago y la cordillera',
+    name: ['Hoteles urbanos', 'Urban hotels'],
+    place: ['Punta Arenas · Puerto Natales', 'Punta Arenas · Puerto Natales'],
+    head: ['Menos tiempo coordinando compras. Más foco en el huésped.', 'Less time coordinating purchases. More focus on the guest.'],
+    pains: [['Proveedores dispersos', 'Scattered suppliers'], ['Recepciones descoordinadas', 'Uncoordinated receiving'], ['Compras reactivas', 'Reactive purchasing']],
+    covers: [['Alimentos y bebidas', 'Food and beverages'], ['Limpieza y operación', 'Cleaning and operations'], ['Amenities y textiles', 'Amenities and textiles'], ['Consolidación', 'Consolidation']],
+  },
+  {
+    id: 'lodges', img: lodge, alt: 'Sala de un lodge con ventanales al paisaje',
+    name: ['Lodges remotos', 'Remote lodges'],
+    place: ['Operaciones aisladas de Magallanes', 'Isolated operations in Magallanes'],
+    head: ['Continuidad de abastecimiento donde la distancia pesa.', 'Supply continuity where distance weighs.'],
+    pains: [['Distancia y clima', 'Distance and weather'], ['Cadena de frío', 'Cold chain'], ['Estacionalidad', 'Seasonality']],
+    covers: [['Planificación', 'Planning'], ['Proveedores', 'Suppliers'], ['Consolidación', 'Consolidation'], ['Última milla', 'Last mile']],
+  },
+  {
+    id: 'cadenas', img: cadena, alt: 'Habitación de un hotel de la región con ventanal sobre el mar y el muelle',
+    name: ['Cadenas y grupos', 'Chains and groups'],
+    place: ['Varias propiedades, un marco común', 'Several properties, one common framework'],
+    head: ['Más control y consistencia entre propiedades.', 'More control and consistency across properties.'],
+    pains: [['Falta de estándar', 'No standard'], ['Gasto fragmentado', 'Fragmented spend'], ['Gestión desigual', 'Uneven management']],
+    covers: [['Catálogo homologado', 'Standardized catalog'], ['Proveedores coordinados', 'Coordinated suppliers'], ['Compras consolidadas', 'Consolidated purchasing'], ['Gestión local', 'Local management']],
+  },
+];
+const bi = (p) => `<span class="l-es">${p[0]}</span><span class="l-en">${p[1]}</span>`;
+---
+<section class="sec sec-segs" id="para-quien">
+  <Deco kind="topo" op={0.06} />
+  <div class="wrap">
+    <header class="sec-h sec-h-split" data-reveal>
+      <div>
+        <p class="kick"><Bi f={(X) => X.segKicker} /></p>
+        <h2><Bi f={(X) => X.segTitle} /></h2>
+      </div>
+      <p class="lead"><Bi f={(X) => X.segText} /></p>
+    </header>
+    <div class="sx" data-reveal data-tabs>
+      <div class="sx-tabs" role="tablist">
+        {tabs.map((t, i) => (
+          <button class="sx-tab" role="tab" type="button" id={`tab-${t.id}`} aria-controls={`panel-${t.id}`} aria-selected={i === 0 ? 'true' : 'false'} tabindex={i === 0 ? 0 : -1}>
+            <b><Fragment set:html={bi(t.name)} /></b>
+            <small><Fragment set:html={bi(t.place)} /></small>
+          </button>
+        ))}
+      </div>
+      <div class="sx-body">
+        <div class="sx-photos">
+          {tabs.map((t, i) => <Image class="sx-img" data-on={i === 0 ? 'true' : 'false'} src={t.img} width={1024} alt={t.alt} loading="lazy" />)}
+        </div>
+        <div class="sx-panels">
+          {tabs.map((t, i) => (
+            <div class="sx-panel" role="tabpanel" id={`panel-${t.id}`} aria-labelledby={`tab-${t.id}`} hidden={i !== 0}>
+              <h3><Fragment set:html={bi(t.head)} /></h3>
+              <div class="sx-cols">
+                <div>
+                  <p class="sx-lab"><span class="l-es">El desafío</span><span class="l-en">The challenge</span></p>
+                  <ul class="sx-no">{t.pains.map((p) => <li><Fragment set:html={bi(p)} /></li>)}</ul>
+                </div>
+                <div>
+                  <p class="sx-lab sx-lab-b"><span class="l-es">Lo que coordinamos</span><span class="l-en">What we coordinate</span></p>
+                  <ul class="sx-yes">{t.covers.map((p) => <li><Fragment set:html={bi(p)} /></li>)}</ul>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+    <p class="seg-also" data-reveal>
+      <span class="l-es">También abastecemos a <b>restaurantes</b>, <b>operadores turísticos</b> y <b>casinos y alimentación institucional</b> de la región de Magallanes.</span>
+      <span class="l-en">We also supply <b>restaurants</b>, <b>tour operators</b> and <b>casinos and institutional catering</b> across the Magallanes region.</span>
+    </p>
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll('[data-tabs]').forEach((root) => {
+    const tabs = [...root.querySelectorAll('[role=tab]')];
+    const panels = [...root.querySelectorAll('[role=tabpanel]')];
+    const imgs = [...root.querySelectorAll('.sx-img')];
+    const show = (i, focus) => {
+      tabs.forEach((t, j) => { t.setAttribute('aria-selected', j === i ? 'true' : 'false'); t.tabIndex = j === i ? 0 : -1; });
+      panels.forEach((p, j) => { p.hidden = j !== i; });
+      imgs.forEach((m, j) => { m.dataset.on = j === i ? 'true' : 'false'; });
+      if (focus) tabs[i].focus();
+    };
+    tabs.forEach((t, i) => {
+      t.addEventListener('click', () => show(i));
+      t.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight' || e.key === 'ArrowDown') { e.preventDefault(); show((i + 1) % tabs.length, true); }
+        if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') { e.preventDefault(); show((i - 1 + tabs.length) % tabs.length, true); }
+      });
+    });
+  });
+</script>

@@ -1,0 +1,68 @@
+---
+import Bi from './Bi.astro';
+import Deco from './Deco.astro';
+import C from '../data/content.json';
+import { truckSVG } from '../lib/svg.js';
+const appUrl = import.meta.env.PUBLIC_APP_URL || '/app/login';
+const names = ['nombre', 'correo', 'celular', 'tipo'];
+const kinds = ['text', 'email', 'tel', 'select'];
+const auto = ['name', 'email', 'tel', 'off'];
+const labels = [['Nombre', 'Name'], ['Correo', 'Email'], ['Celular', 'Mobile phone'], ['Tipo de negocio', 'Type of business']];
+const last = (s) => { const w = s.split(' '); return [w.slice(0, -1).join(' '), w[w.length - 1]]; };
+---
+<section class="sec sec-contact" id="contacto">
+  <Deco kind="topo" op={0.05} />
+  <div class="wrap contact-in">
+    <div class="contact-l">
+      <header class="sec-h" data-reveal>
+        <h2 class="cta-title">
+          <span class="l-es" lang="es">{last(C.es.ctaTitle)[0]} <mark>{last(C.es.ctaTitle)[1]}</mark></span>
+          <span class="l-en" lang="en">{last(C.en.ctaTitle)[0]} <mark>{last(C.en.ctaTitle)[1]}</mark></span>
+        </h2>
+        <p class="lead"><Bi f={(X) => X.ctaText} /></p>
+      </header>
+      <div class="trk" data-track data-reveal style="--i:2" aria-hidden="true">
+        <div class="trk-ends">
+          <span><Bi f={(X) => X.dispFromV} /></span>
+          <span class="trk-to">
+            <span class="trk-def"><span class="l-es">Tu negocio · Magallanes</span><span class="l-en">Your business · Magallanes</span></span>
+            <span class="trk-name" data-trk-name></span>
+          </span>
+        </div>
+        <div class="trk-rail">
+          <i class="trk-fill"></i>
+          <span class="trk-truck" set:html={truckSVG(44, 'currentColor')} />
+          <b class="trk-end"></b>
+        </div>
+        <p class="trk-state">
+          <span class="l-es" data-trk-es>Ya salió de Santiago.</span><span class="l-en" data-trk-en>Left Santiago.</span>
+        </p>
+      </div>
+    </div>
+    <form class="form" data-contact novalidate data-reveal>
+      <h3><Bi f={(X) => X.formTitle} /></h3>
+      {kinds.map((k, i) => (
+        <div class="field">
+          <label for={`f-${names[i]}`}><span class="l-es">{labels[i][0]}</span><span class="l-en">{labels[i][1]}</span></label>
+          {k === 'select' ? (
+            <select id={`f-${names[i]}`} name={names[i]} required>
+              <option value="" selected></option>
+              {C.es.tags.map((t, j) => <option value={t}>{t} / {C.en.tags[j]}</option>)}
+            </select>
+          ) : (
+            <input id={`f-${names[i]}`} name={names[i]} type={k} autocomplete={auto[i]} required />
+          )}
+          <span class="msg"><span class="l-es">Revisa este campo.</span><span class="l-en">Please check this field.</span></span>
+        </div>
+      ))}
+      <button class="btn btn-cta send" type="submit"><Bi f={(X) => X.send} /></button>
+      <p class="form-note"><Bi f={(X) => X.formNote} /> <a href={appUrl} data-login><Bi f={(X) => X.login} /></a></p>
+      <div class="form-ok" role="status">
+        <span class="ok-ic"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
+        <h4><span class="l-es">Mensaje enviado.</span><span class="l-en">Message sent.</span></h4>
+        <p><span class="l-es">Te respondemos por correo.</span><span class="l-en">We will reply by email.</span></p>
+        <button class="btn btn-o" type="button" data-again><span class="l-es">Enviar otro</span><span class="l-en">Send another</span></button>
+      </div>
+    </form>
+  </div>
+</section>

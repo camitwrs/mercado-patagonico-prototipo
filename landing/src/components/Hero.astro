@@ -1,0 +1,67 @@
+---
+import Bi from './Bi.astro';
+import Deco from './Deco.astro';
+import C from '../data/content.json';
+import { iconSVG, truckSVG } from '../lib/svg.js';
+import { heroSceneSVG } from '../lib/scene.js';
+const parts = (s, hl) => { const i = s.indexOf(hl); return i < 0 ? [s, '', ''] : [s.slice(0, i), hl, s.slice(i + hl.length)]; };
+const facts = [[3, 'snow'], [4, 'truck'], [5, 'scan']];
+---
+<section class="hero" data-zone>
+  <Deco kind="topo" op={0.04} />
+  <Deco kind="ridge" pos="deco-hero-ridge" />
+  <div class="wrap hero-in">
+    <div class="hero-text">
+      <p class="eyebrow" data-reveal><span class="truck" set:html={truckSVG(26, 'currentColor')} /><Bi f={(X) => X.eyebrow} /></p>
+      <h1 data-reveal style="--i:1">
+        <span class="l-es" lang="es">{parts(C.es.h1, C.es.hl)[0]}<mark>{parts(C.es.h1, C.es.hl)[1]}</mark>{parts(C.es.h1, C.es.hl)[2]}</span>
+        <span class="l-en" lang="en">{parts(C.en.h1, C.en.hl)[0]}<mark>{parts(C.en.h1, C.en.hl)[1]}</mark>{parts(C.en.h1, C.en.hl)[2]}</span>
+      </h1>
+      <p class="hero-body" data-reveal style="--i:2"><Bi f={(X) => X.body} /></p>
+      <a class="btn btn-cta btn-lg" href="#como-funciona" data-reveal style="--i:3"><Bi f={(X) => X.heroCta} /><span class="arr" aria-hidden="true">→</span></a>
+      <ul class="facts" data-reveal style="--i:4">
+        {facts.map((f) => <li><span set:html={iconSVG(f[1], 22, 'currentColor')} /><Bi f={(X) => X.val[f[0]][0]} /></li>)}
+      </ul>
+    </div>
+    <div class="hero-vis" data-scene set:html={heroSceneSVG()} />
+  </div>
+</section>
+
+<script>
+  const root = document.querySelector('[data-scene]');
+  if (root) {
+    const svg = root.querySelector('svg');
+    const tpl = svg.querySelector('[data-tpl]');
+    const bld = svg.querySelector('.bld');
+    const ns = 'http://www.w3.org/2000/svg';
+    const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const lang = document.documentElement.lang === 'en' ? 'en' : 'es';
+    const label = lang === 'en' ? 'Send a box to Magallanes' : 'Enviar una caja a Magallanes';
+    let live = 0;
+    const send = (cols) => {
+      if (reduce || live >= 3) return;
+      live++;
+      const g = tpl.cloneNode(true);
+      g.removeAttribute('data-tpl'); g.style.display = '';
+      const polys = g.querySelectorAll('polygon');
+      cols.forEach((c, i) => polys[i] && polys[i].setAttribute('fill', c));
+      const am = document.createElementNS(ns, 'animateMotion');
+      am.setAttribute('dur', '2.4s'); am.setAttribute('begin', 'indefinite'); am.setAttribute('fill', 'freeze');
+      am.setAttribute('path', tpl.dataset.path);
+      am.setAttribute('calcMode', 'spline'); am.setAttribute('keyPoints', '0;1'); am.setAttribute('keyTimes', '0;1'); am.setAttribute('keySplines', '.45 0 .55 1');
+      g.appendChild(am);
+      svg.insertBefore(g, bld);
+      am.addEventListener('endEvent', () => {
+        g.remove(); live--;
+        bld.classList.remove('recv'); void bld.getBoundingClientRect(); bld.classList.add('recv');
+      });
+      am.beginElement();
+    };
+    svg.querySelectorAll('.cube').forEach((c) => {
+      c.setAttribute('aria-label', label);
+      const go = () => send(c.dataset.c.split(','));
+      c.addEventListener('click', go);
+      c.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); } });
+    });
+  }
+</script>

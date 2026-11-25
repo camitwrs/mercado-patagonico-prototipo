@@ -1,0 +1,10 @@
+---
+// Logo: isotipo + nombre. dark = versión para fondos oscuros; sin dark sigue el tema.
+import { logoIconSVG } from '../lib/art.js';
+const { dark = false } = Astro.props;
+---
+<span class:list={['logo', { 'logo-fixed-dark': dark }]}>
+  <span class="logo-i lt" aria-hidden="true" set:html={logoIconSVG(120, false)} />
+  <span class="logo-i dk" aria-hidden="true" set:html={logoIconSVG(120, true)} />
+  <span class="logo-tx"><span>MERCADO</span><b>PATAGÓNICO</b></span>
+</span>

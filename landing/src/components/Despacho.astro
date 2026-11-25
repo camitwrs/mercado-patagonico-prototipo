@@ -1,0 +1,19 @@
+---
+// Etiqueta de despacho (boleta). compact = versión secundaria del hero.
+import Bi from './Bi.astro';
+import C from '../data/content.json';
+import { iconSVG, barcodeSVG } from '../lib/svg.js';
+const { compact = false } = Astro.props;
+---
+<article class:list={['despacho', { compact }]} tabindex="0">
+  <header><span><Bi f={(X) => X.dispTitle} /></span><code>MP-0001</code></header>
+  <div class="d-b">
+    <div class="d-r"><small><Bi f={(X) => X.dispFrom} /></small><b><Bi f={(X) => X.dispFromV} /></b></div>
+    <div class="d-r d-big"><small><Bi f={(X) => X.dispTo} /></small><b><Bi f={(X) => X.dispToV} /></b></div>
+    {!compact && <div class="d-r"><small><Bi f={(X) => X.dispFor} /></small><p>{C.es.tags.map((_, i) => <><Bi f={(X) => X.tags[i]} />{i < C.es.tags.length - 1 && ' · '}</>)}</p></div>}
+    <div class="d-f">
+      <span class="stamp"><i set:html={iconSVG('snow', 16, 'currentColor')} /><Bi f={(X) => X.stamp} /></span>
+      <span class="bar" set:html={barcodeSVG(260, 34, 'currentColor')} />
+    </div>
+  </div>
+</article>

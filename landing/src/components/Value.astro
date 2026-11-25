@@ -1,0 +1,31 @@
+---
+import Bi from './Bi.astro';
+import Deco from './Deco.astro';
+// Tres promesas centrales en gran formato; el resto como contexto en una sola franja.
+const main = [3, 4, 2], rest = [5, 6];
+---
+<section class="sec sec-value" id="valor">
+  <Deco kind="crystal" op={0.14} pos="deco-crystal-r" size={320} />
+  <div class="wrap">
+    <header class="sec-h" data-reveal>
+      <p class="kick"><Bi f={(X) => X.valKicker} /></p>
+      <h2><Bi f={(X) => X.valTitle} /></h2>
+    </header>
+    <div class="pledge">
+      {main.map((k, n) => (
+        <article class="pl-row" data-reveal style={`--i:${n}`}>
+          <h3><Bi f={(X) => X.val[k][0]} /></h3>
+          <p><Bi f={(X) => X.val[k][1]} /></p>
+        </article>
+      ))}
+    </div>
+    <dl class="also" data-reveal>
+      {rest.map((k) => (
+        <div>
+          <dt><Bi f={(X) => X.val[k][0]} /></dt>
+          <dd><Bi f={(X) => X.val[k][1]} /></dd>
+        </div>
+      ))}
+    </dl>
+  </div>
+</section>

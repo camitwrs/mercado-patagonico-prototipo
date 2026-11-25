@@ -1,0 +1,52 @@
+---
+import Deco from './Deco.astro';
+// Texto de la presentación corporativa: "Lo que hay detrás".
+const items = [
+  [['Proveedores dispersos', 'Scattered suppliers'], ['Pedidos, condiciones y contactos distintos.', 'Different orders, terms and contacts.']],
+  [['Entregas descoordinadas', 'Uncoordinated deliveries'], ['Ventanas de recepción que se cruzan.', 'Receiving windows that overlap.']],
+  [['Urgencias y faltantes', 'Emergencies and shortages'], ['Compras reactivas que presionan el margen.', 'Reactive purchasing that squeezes margins.']],
+];
+// Desorden inicial de cada tramo de la línea (se ordena al entrar en pantalla).
+const jit = [[-9, -7], [7, 5], [-5, 8], [10, -4], [-8, 6], [6, -9]];
+---
+<section class="sec sec-problem" id="problema">
+  <Deco kind="topo" op={0.05} />
+  <div class="wrap pb-grid">
+    <header class="sec-h pb-head" data-reveal>
+      <p class="kick"><span class="l-es">Lo que hay detrás</span><span class="l-en">What lies behind it</span></p>
+      <h2>
+        <span class="l-es" lang="es">Que el abastecimiento acompañe la experiencia. <mark>No que la complique.</mark></span>
+        <span class="l-en" lang="en">Supply should support the experience. <mark>Not complicate it.</mark></span>
+      </h2>
+    </header>
+    <ol class="pb-list" data-tangle>
+      {items.map((it, i) => (
+        <li class="pb-item" data-reveal style={`--i:${i}`}>
+          <span class="pb-n">0{i + 1}</span>
+          <div class="pb-t">
+            <h3><span class="l-es">{it[0][0]}</span><span class="l-en">{it[0][1]}</span></h3>
+            <p><span class="l-es">{it[1][0]}</span><span class="l-en">{it[1][1]}</span></p>
+          </div>
+          <span class="pb-line" aria-hidden="true">
+            {jit.map((j, k) => <i style={`--y:${j[0] * (1 + i * 0.25)}px;--r:${j[1] * 2}deg;--d:${k * 70}ms`} />)}
+          </span>
+        </li>
+      ))}
+    </ol>
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll('[data-tangle]').forEach((el) => {
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) { el.classList.add('ordered'); return; }
+    const io = new IntersectionObserver((es) => es.forEach((e) => {
+      if (e.isIntersecting) { setTimeout(() => el.classList.add('ordered'), 900); io.disconnect(); }
+    }), { threshold: 0.6 });
+    io.observe(el);
+    // al pasar el cursor, vuelve a desordenarse y se reordena
+    el.querySelectorAll('.pb-item').forEach((it) => {
+      it.addEventListener('pointerenter', () => { it.classList.add('messy'); });
+      it.addEventListener('pointerleave', () => { it.classList.remove('messy'); });
+    });
+  });
+</script>

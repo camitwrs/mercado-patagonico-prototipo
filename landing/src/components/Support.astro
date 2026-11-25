@@ -1,0 +1,62 @@
+---
+import Bi from './Bi.astro';
+import Deco from './Deco.astro';
+import C from '../data/content.json';
+const letters = ['A', 'B', 'C', 'D'];
+---
+<section class="sec sec-support" id="acompanamiento">
+  <Deco kind="crystal" op={0.12} pos="deco-crystal-l" size={260} />
+  <div class="wrap">
+    <header class="sec-h" data-reveal>
+      <p class="kick"><Bi f={(X) => X.relKicker} /></p>
+      <h2><Bi f={(X) => X.relTitle} /></h2>
+    </header>
+
+    <div class="tl" data-tl>
+      <ol class="tl-stops">
+        {C.es.rel.map((_, i) => (
+          <li class="tl-stop" tabindex="0" data-i={i} data-reveal style={`--i:${i}`}>
+            <span class="tl-ck" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
+            <span class="tl-n">0{i + 1}</span>
+            <h3><Bi f={(X) => X.rel[i][0]} /></h3>
+            <p><Bi f={(X) => X.rel[i][1]} /></p>
+          </li>
+        ))}
+      </ol>
+    </div>
+
+    <div class="chs">
+      <h3 class="chs-t" data-reveal><Bi f={(X) => X.chTitle} /></h3>
+      <ul class="chs-l">
+        {C.es.ch.map((_, i) => (
+          <li class="chs-i" data-reveal style={`--i:${i}`}>
+            <span class="chs-k">{letters[i]}</span>
+            <span class="chs-n"><Bi f={(X) => X.ch[i]} /></span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll('[data-tl]').forEach((root) => {
+    const stops = [...root.querySelectorAll('.tl-stop')];
+    const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const tick = (s) => { s.classList.remove('done'); void s.offsetWidth; s.classList.add('done'); };
+    const focusOn = (i) => stops.forEach((s, j) => s.classList.toggle('cur', j === i));
+    // al entrar en pantalla las marcas se dibujan una a una
+    const run = () => {
+      if (reduce) { stops.forEach((s) => s.classList.add('done')); return; }
+      stops.forEach((s, i) => setTimeout(() => s.classList.add('done'), 350 + i * 420));
+    };
+    const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { run(); io.disconnect(); } }), { threshold: 0.5 });
+    io.observe(root);
+    stops.forEach((s, i) => {
+      s.addEventListener('pointerenter', () => { focusOn(i); if (!reduce) tick(s); });
+      s.addEventListener('pointerleave', () => focusOn(-1));
+      s.addEventListener('focus', () => { focusOn(i); if (!reduce) tick(s); });
+      s.addEventListener('blur', () => focusOn(-1));
+    });
+  });
+</script>

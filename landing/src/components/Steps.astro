@@ -1,0 +1,23 @@
+---
+import Bi from './Bi.astro';
+import Deco from './Deco.astro';
+import C from '../data/content.json';
+---
+<section class="sec sec-steps" id="como-funciona">
+  <Deco kind="topo" op={0.1} />
+  <Deco kind="crystal" op={0.35} pos="deco-crystal-r" size={380} />
+  <div class="wrap">
+    <header class="sec-h sec-h-center" data-reveal>
+      <p class="kick"><Bi f={(X) => X.stepsKicker} /></p>
+      <h2><Bi f={(X) => X.stepsTitle} /></h2>
+    </header>
+    <ol class="steps" data-live>
+      {C.es.steps.map((_, i) => (
+        <li class="step" style={`--i:${i}`} data-reveal>
+          <div class="st-h"><span class="node">{i + 1}</span>{i < 3 && <i class="seg"></i>}</div>
+          <div class="st-b"><h3><Bi f={(X) => X.steps[i][0]} /></h3><p><Bi f={(X) => X.steps[i][1]} /></p></div>
+        </li>
+      ))}
+    </ol>
+  </div>
+</section>

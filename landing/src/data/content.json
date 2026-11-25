@@ -1,0 +1,424 @@
+{
+  "es": {
+    "lang": "ES",
+    "nav": [
+      "Qué es",
+      "Cómo funciona",
+      "Para quién",
+      "Preguntas"
+    ],
+    "contact": "Contacto",
+    "login": "Ingresar",
+    "eyebrow": "Plataforma de abastecimiento hotelero y gastronómico",
+    "h1": "Todo lo que el sur debería tener, resuelto desde un solo lugar.",
+    "hl": "debería tener,",
+    "body": "Un solo operador reúne compras, proveedores y logística para los hoteles, lodges y restaurantes de Magallanes. Pide y sigue cada entrega en la plataforma.",
+    "heroCta": "Descubre cómo funciona",
+    "tags": [
+      "Hoteles",
+      "Lodges",
+      "Restaurantes",
+      "Operadores turísticos",
+      "Casinos"
+    ],
+    "dispTitle": "Despacho",
+    "dispFrom": "Origen",
+    "dispFromV": "Santiago · Puerto Montt",
+    "dispTo": "Destino",
+    "dispToV": "Magallanes",
+    "dispFor": "Para",
+    "stamp": "Cadena de frío",
+    "stmt": [
+      "Un solo operador.",
+      "Múltiples proveedores.",
+      "Una solución integral."
+    ],
+    "hubKicker": "Un solo punto de entrada",
+    "hubTitle": "Reúne a todos tus proveedores en un solo lugar.",
+    "hubText": "Trabajamos con proveedores de Santiago y Puerto Montt y con productores regionales. Consolidamos las compras y entregamos hasta tu puerta.",
+    "hubName": [
+      "Mercado",
+      "Patagónico"
+    ],
+    "hubSub": "Un solo operador",
+    "hubFrom": "Orígenes",
+    "hubTo": "Destinos",
+    "origins": [
+      "Proveedores de Santiago",
+      "Proveedores de Puerto Montt",
+      "Productores regionales"
+    ],
+    "valKicker": "Propuesta de valor",
+    "valTitle": "Exige un solo operador para todo tu abastecimiento.",
+    "val": [
+      [
+        "Un solo operador de abastecimiento",
+        "Centraliza todo en un solo lugar."
+      ],
+      [
+        "Múltiples proveedores y orígenes",
+        "Accede a proveedores de Santiago, de Puerto Montt y a productores regionales."
+      ],
+      [
+        "Compras consolidadas",
+        "Agrupa tus pedidos y recibe menos entregas dispersas."
+      ],
+      [
+        "Cadena de frío",
+        "Controla la temperatura de los productos que la necesitan."
+      ],
+      [
+        "Entrega hasta la última milla",
+        "Recibe tu pedido en tu puerta."
+      ],
+      [
+        "Trazabilidad integral",
+        "Sigue cada pedido de punta a punta."
+      ],
+      [
+        "Menor complejidad para ti",
+        "Una sola relación y un solo flujo de pedidos."
+      ]
+    ],
+    "chainKicker": "De origen a tu puerta",
+    "chainTitle": "Cada eslabón, bajo un solo operador.",
+    "chain": [
+      [
+        "Proveedores",
+        "Santiago · Puerto Montt · Magallanes"
+      ],
+      [
+        "Consolidación",
+        "Compras y carga"
+      ],
+      [
+        "Logística",
+        "Transporte y distribución"
+      ],
+      [
+        "Tu establecimiento",
+        "Hoteles y restaurantes"
+      ]
+    ],
+    "actsLabel": "Lo que hacemos por ti",
+    "acts": [
+      "Gestión de proveedores",
+      "Compras y negociación",
+      "Consolidación de carga",
+      "Almacenamiento",
+      "Transporte y distribución",
+      "Gestión de pedidos"
+    ],
+    "segKicker": "Para quién",
+    "segTitle": "Para el canal HORECA.",
+    "segText": "Hoteles, lodges, restaurantes, operadores turísticos y casinos de Magallanes: ordena tu abastecimiento.",
+    "segs": [
+      "Hoteles",
+      "Lodges",
+      "Restaurantes",
+      "Operadores turísticos",
+      "Casinos y alimentación institucional",
+      "Región de Magallanes"
+    ],
+    "photoCap": [
+      "Hoteles",
+      "Lodges"
+    ],
+    "photoPh": "Foto de la clienta",
+    "relKicker": "Acompañamiento",
+    "relTitle": "Ten a alguien a cargo de tu abastecimiento.",
+    "rel": [
+      [
+        "Ejecutivo de cuenta",
+        "Un interlocutor para tu operación."
+      ],
+      [
+        "Abastecimiento programado",
+        "Define tus frecuencias de entrega."
+      ],
+      [
+        "Atención centralizada",
+        "Un solo canal para todas tus categorías."
+      ],
+      [
+        "Seguimiento de pedidos",
+        "Sigue el estado de cada pedido."
+      ],
+      [
+        "Servicio posventa",
+        "Soporte después de cada entrega."
+      ]
+    ],
+    "chKicker": "Canales",
+    "chTitle": "Pide por donde prefieras.",
+    "ch": [
+      "Plataforma digital de abastecimiento",
+      "Ejecutivos comerciales B2B y portal de clientes",
+      "Órdenes de compra, atención y soporte operacional",
+      "Red de distribución y entrega directa"
+    ],
+    "stepsKicker": "Cómo funciona",
+    "stepsTitle": "Entra al mercado en cuatro pasos.",
+    "steps": [
+      [
+        "Nos contactas",
+        "Nos cuentas de tu negocio en un formulario corto."
+      ],
+      [
+        "Creamos tu cuenta",
+        "Un administrador de nuestro equipo crea tu usuario. No hay registro propio."
+      ],
+      [
+        "Ingresas a la plataforma",
+        "Con tu usuario ves el catálogo y haces tus pedidos dentro de la plataforma."
+      ],
+      [
+        "Recibes tu pedido",
+        "Tu pedido llega a tu negocio."
+      ]
+    ],
+    "faqTitle": "Preguntas frecuentes",
+    "faq": [
+      [
+        "¿Quién puede usar Mercado Patagónico?",
+        "Hoteles, lodges, restaurantes, operadores turísticos y casinos de Magallanes. Contáctanos y revisamos tu caso."
+      ],
+      [
+        "¿Cómo obtengo mi cuenta?",
+        "No hay registro propio. Un administrador de nuestro equipo crea tu cuenta cuando nos contactas. Con ese usuario ingresas con el botón Ingresar."
+      ],
+      [
+        "¿Es para reservar una habitación o una mesa?",
+        "No. Mercado Patagónico es para quienes compran y abastecen: hoteles, restaurantes y operadores que necesitan proveerse de productos. Los pedidos se hacen dentro de la plataforma."
+      ],
+      [
+        "¿Qué abastecen?",
+        "Alimentos y bebidas, limpieza y operación, y amenities y textiles. El catálogo se ve al ingresar."
+      ]
+    ],
+    "ctaTitle": "Ordena tu abastecimiento hoy.",
+    "ctaText": "Cuéntanos de tu operación y te contactamos. Un administrador de nuestro equipo crea tu cuenta.",
+    "formTitle": "Contáctanos",
+    "fields": [
+      "Nombre y cargo",
+      "Nombre del negocio",
+      "Tipo de negocio",
+      "Correo de trabajo",
+      "Teléfono"
+    ],
+    "send": "Enviar mensaje",
+    "formNote": "Te respondemos por correo. ¿Ya tienes cuenta?",
+    "footer": "Mercado Patagónico es un producto de Latitud53."
+  },
+  "en": {
+    "lang": "EN",
+    "nav": [
+      "What it is",
+      "How it works",
+      "Who it's for",
+      "FAQ"
+    ],
+    "contact": "Contact",
+    "login": "Log in",
+    "eyebrow": "Hospitality and food service supply platform",
+    "h1": "Everything the south should have, solved from a single place.",
+    "hl": "should have,",
+    "body": "A single operator brings purchasing, suppliers and logistics together for the hotels, lodges and restaurants of Magallanes. Order and follow every delivery on the platform.",
+    "heroCta": "Discover how it works",
+    "tags": [
+      "Hotels",
+      "Lodges",
+      "Restaurants",
+      "Tour operators",
+      "Institutional dining"
+    ],
+    "dispTitle": "Dispatch",
+    "dispFrom": "Origin",
+    "dispFromV": "Santiago · Puerto Montt",
+    "dispTo": "Destination",
+    "dispToV": "Magallanes",
+    "dispFor": "For",
+    "stamp": "Cold chain",
+    "stmt": [
+      "One operator.",
+      "Multiple suppliers.",
+      "One integrated solution."
+    ],
+    "hubKicker": "A single entry point",
+    "hubTitle": "Bring all your suppliers together in one place.",
+    "hubText": "We work with suppliers in Santiago and Puerto Montt and with regional producers. We consolidate purchasing and deliver to your door.",
+    "hubName": [
+      "Mercado",
+      "Patagónico"
+    ],
+    "hubSub": "One operator",
+    "hubFrom": "Origins",
+    "hubTo": "Destinations",
+    "origins": [
+      "Suppliers in Santiago",
+      "Suppliers in Puerto Montt",
+      "Regional producers"
+    ],
+    "valKicker": "Value proposition",
+    "valTitle": "Demand a single operator for all your supply.",
+    "val": [
+      [
+        "A single supply operator",
+        "Centralize everything in one place."
+      ],
+      [
+        "Multiple suppliers and origins",
+        "Access suppliers from Santiago, Puerto Montt and regional producers."
+      ],
+      [
+        "Consolidated purchasing",
+        "Group your orders and receive fewer scattered deliveries."
+      ],
+      [
+        "Cold chain",
+        "Control the temperature of the products that need it."
+      ],
+      [
+        "Delivery to the last mile",
+        "Receive your order at your door."
+      ],
+      [
+        "Full traceability",
+        "Follow every order from end to end."
+      ],
+      [
+        "Less complexity for you",
+        "One relationship and one order flow."
+      ]
+    ],
+    "chainKicker": "From origin to your door",
+    "chainTitle": "Every link, under a single operator.",
+    "chain": [
+      [
+        "Suppliers",
+        "Santiago · Puerto Montt · Magallanes"
+      ],
+      [
+        "Consolidation",
+        "Purchasing and loads"
+      ],
+      [
+        "Logistics",
+        "Transport and distribution"
+      ],
+      [
+        "Your business",
+        "Hotels and restaurants"
+      ]
+    ],
+    "actsLabel": "What we do for you",
+    "acts": [
+      "Supplier management",
+      "Purchasing and negotiation",
+      "Load consolidation",
+      "Storage",
+      "Transport and distribution",
+      "Order management"
+    ],
+    "segKicker": "Who it's for",
+    "segTitle": "For the HORECA channel.",
+    "segText": "Hotels, lodges, restaurants, tour operators and institutional dining in Magallanes: organize your supply.",
+    "segs": [
+      "Hotels",
+      "Lodges",
+      "Restaurants",
+      "Tour operators",
+      "Institutional dining",
+      "Magallanes region"
+    ],
+    "photoCap": [
+      "Hotels",
+      "Lodges"
+    ],
+    "photoPh": "Client photo",
+    "relKicker": "Support",
+    "relTitle": "Have someone in charge of your supply.",
+    "rel": [
+      [
+        "Account executive",
+        "One contact for your operation."
+      ],
+      [
+        "Scheduled supply",
+        "Set your delivery frequencies."
+      ],
+      [
+        "Centralized service",
+        "One channel for all your categories."
+      ],
+      [
+        "Order tracking",
+        "Follow the status of every order."
+      ],
+      [
+        "After-sales service",
+        "Support after every delivery."
+      ]
+    ],
+    "chKicker": "Channels",
+    "chTitle": "Order the way you prefer.",
+    "ch": [
+      "Digital supply platform",
+      "B2B sales executives and customer portal",
+      "Purchase orders, service and operational support",
+      "Distribution network and direct delivery"
+    ],
+    "stepsKicker": "How it works",
+    "stepsTitle": "Enter the market in four steps.",
+    "steps": [
+      [
+        "You contact us",
+        "Tell us about your business in a short form."
+      ],
+      [
+        "We create your account",
+        "An administrator on our team creates your user. There is no self-registration."
+      ],
+      [
+        "You log in to the platform",
+        "With your user, you see the catalog and place your orders inside the platform."
+      ],
+      [
+        "You receive your order",
+        "Your order arrives at your business."
+      ]
+    ],
+    "faqTitle": "Frequently asked questions",
+    "faq": [
+      [
+        "Who can use Mercado Patagónico?",
+        "Hotels, lodges, restaurants, tour operators and institutional dining in Magallanes. Contact us and we will review your case."
+      ],
+      [
+        "How do I get my account?",
+        "There is no self-registration. An administrator on our team creates your account when you contact us. With that user, you log in with the Log in button."
+      ],
+      [
+        "Is this for booking a room or a table?",
+        "No. Mercado Patagónico is for those who buy and stock up: hotels, restaurants and operators that need to source products. Orders are placed inside the platform."
+      ],
+      [
+        "What do you supply?",
+        "Food and beverages, cleaning and operations, and amenities and textiles. The catalog is visible after logging in."
+      ]
+    ],
+    "ctaTitle": "Organize your supply today.",
+    "ctaText": "Tell us about your operation and we will contact you. An administrator on our team creates your account.",
+    "formTitle": "Contact us",
+    "fields": [
+      "Name and role",
+      "Business name",
+      "Type of business",
+      "Work email",
+      "Phone"
+    ],
+    "send": "Send message",
+    "formNote": "We reply by email. Already have an account?",
+    "footer": "Mercado Patagónico is a product of Latitud53."
+  }
+}

@@ -1,0 +1,49 @@
+---
+// Ruta de abastecimiento: orígenes → un solo operador → destinos. Hitos en flecha sobre una cordillera.
+import Bi from './Bi.astro';
+import Deco from './Deco.astro';
+import C from '../data/content.json';
+import { crateSingleSVG } from '../lib/art.js';
+const oy = [127, 195, 263], dy = [59, 127, 195, 263, 331];
+const paths = [
+  ...oy.map((y) => ({ d: `M310 ${y} C 400 ${y}, 430 195, 500 195`, k: 'o' })),
+  ...dy.map((y) => ({ d: `M620 195 C 740 195, 770 ${y}, 880 ${y}`, k: 'd' })),
+];
+---
+<section class="sec sec-route" id="que-es">
+  <Deco kind="topo" op={0.07} />
+  <div class="wrap">
+    <header class="sec-h sec-h-split" data-reveal>
+      <div>
+        <p class="kick"><Bi f={(X) => X.hubKicker} /></p>
+        <h2><Bi f={(X) => X.hubTitle} /></h2>
+      </div>
+      <p class="lead"><Bi f={(X) => X.hubText} /></p>
+    </header>
+    <div class="route" data-reveal data-live>
+      <div class="route-in">
+        <svg class="r-lines" viewBox="0 0 1200 440" aria-hidden="true">
+          {paths.map((p, i) => (
+            <>
+              <path class={`r-path r-${p.k}`} d={p.d} />
+              <circle r="4.5" visibility="hidden" class={`r-dot r-dot-${p.k}`}><set attributeName="visibility" to="visible" begin={`${(i % 4) * 0.5}s`} /><animateMotion dur={`${3.2 + (i % 3) * 0.6}s`} repeatCount="indefinite" path={p.d} begin={`${(i % 4) * 0.5}s`} /></circle>
+            </>
+          ))}
+        </svg>
+        <p class="r-label r-l-o"><Bi f={(X) => X.hubFrom} /></p>
+        <p class="r-label r-l-d"><Bi f={(X) => X.hubTo} /></p>
+        <ul class="r-col r-orig">
+          {C.es.origins.map((_, i) => <li class="sign sign-o" style={`--y:${oy[i] - 27}`}><Bi f={(X) => X.origins[i]} /></li>)}
+        </ul>
+        <div class="r-hub">
+          <span class="r-crate" set:html={crateSingleSVG(100)} />
+          <b><Bi f={(X) => X.hubName.join(' ')} /></b>
+          <small><Bi f={(X) => X.hubSub} /></small>
+        </div>
+        <ul class="r-col r-dest">
+          {C.es.tags.map((_, i) => <li class="sign sign-d" style={`--y:${dy[i] - 25}`}><Bi f={(X) => X.tags[i]} /></li>)}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
