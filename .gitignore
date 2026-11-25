@@ -1,0 +1,15 @@
+# dependencias y resultados de construcción
+node_modules/
+dist/
+.astro/
+.vercel/
+
+# material de trabajo que no hace falta para que el sitio funcione
+DESIGN/
+documentacion/
+.claude/
+.playwright-mcp/
+
+.env
+.env.local
+*.log

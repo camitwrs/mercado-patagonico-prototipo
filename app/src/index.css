@@ -1,0 +1,102 @@
+@import 'tailwindcss';
+/* Tokens del sistema de diseño (los mismos de la landing). */
+@import '../../landing/src/styles/tokens.css';
+
+/* Los tokens se exponen a Tailwind por variable CSS: así el modo oscuro cambia sin tocar componentes. */
+@theme inline {
+  --font-sans: 'Noto Sans Variable', system-ui, sans-serif;
+  --font-display: 'Montserrat Variable', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+
+  --color-page: var(--bg-page);
+  --color-subtle: var(--bg-subtle);
+  --color-band: var(--bg-band);
+  --color-surface: var(--bg-surface);
+  --color-inverse: var(--bg-inverse);
+  --color-ink: var(--fg-default);
+  --color-muted: var(--fg-muted);
+  --color-faint: var(--fg-subtle);
+  --color-accent: var(--fg-accent);
+  --color-line: var(--border-default);
+  --color-line-strong: var(--border-strong);
+  --color-primary: var(--action-primary);
+  --color-primary-fg: var(--action-primary-fg);
+  --color-cta: var(--action-cta);
+  --color-cta-fg: var(--action-cta-fg);
+  --color-teal: var(--accent-teal);
+  --color-sky: var(--accent-blue);
+  --color-focus: var(--focus);
+  --color-positive: var(--status-positive);
+  --color-negative: var(--status-negative);
+  --color-warning: var(--status-warning);
+
+  --color-blue-50: var(--blue-50);
+  --color-blue-100: var(--blue-100);
+  --color-blue-200: var(--blue-200);
+  --color-blue-300: var(--blue-300);
+  --color-blue-500: var(--blue-500);
+  --color-blue-600: var(--blue-600);
+  --color-blue-700: var(--blue-700);
+  --color-blue-900: var(--blue-900);
+  --color-blue-950: var(--blue-950);
+  --color-teal-50: var(--teal-50);
+  --color-teal-100: var(--teal-100);
+  --color-teal-500: var(--teal-500);
+  --color-teal-700: var(--teal-700);
+  --color-orange-100: var(--orange-100);
+  --color-orange-500: var(--orange-500);
+  --color-orange-600: var(--warn-text);
+}
+
+@layer base {
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body { @apply bg-page text-ink font-sans antialiased; }
+  h1, h2, h3, h4 { @apply font-display; letter-spacing: -0.02em; }
+  :focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+  }
+}
+
+@layer components {
+  /* Botones: mismo par que la landing (primario azul, CTA naranja, contorno). */
+  .btn { @apply inline-flex items-center justify-center gap-2 rounded-full border-[1.5px] border-transparent px-5 py-3 font-display text-[15px] font-semibold leading-tight whitespace-nowrap transition-[transform,box-shadow,background,color] duration-200 cursor-pointer; }
+  .btn:hover { transform: translateY(-2px); box-shadow: 0 10px 22px rgb(0 37 68 / 0.18); }
+  .btn:active { transform: translateY(0) scale(0.98); }
+  .btn-p { @apply bg-primary text-primary-fg; }
+  .btn-cta { @apply bg-cta text-cta-fg; }
+  .btn-o { @apply border-ink/50 text-ink bg-transparent; }
+  .btn-o:hover { @apply bg-ink/5; }
+  .btn-lg { @apply px-8 py-[18px] text-[17px]; }
+  .kick { @apply inline-flex items-center gap-3 font-mono text-[12px] font-medium uppercase tracking-[0.14em] text-accent; }
+  .kick::before { content: ''; width: 28px; height: 2px; background: currentColor; }
+  .field-label { @apply font-mono text-[12px] font-medium uppercase tracking-[0.08em] text-muted; }
+  .field-input { @apply h-[42px] w-full border-0 border-b-[1.5px] border-ink/35 bg-transparent px-0.5 text-[15px] text-ink outline-none transition-[border-color,box-shadow] duration-200; }
+  .field-input:focus { border-bottom-color: var(--action-cta); box-shadow: 0 1.5px 0 var(--action-cta); }
+}
+
+/* Animaciones: aviso que sube, y el contador del carrito que "salta" al agregar. */
+@keyframes toast-in { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+.toast-in { animation: toast-in 0.3s cubic-bezier(0.2, 0.7, 0.2, 1); }
+@keyframes badge-pop { 0% { transform: scale(0.6); } 55% { transform: scale(1.3); } 100% { transform: scale(1); } }
+.badge-pop { animation: badge-pop 0.4s cubic-bezier(0.3, 1.6, 0.5, 1); }
+@media (prefers-reduced-motion: reduce) { .toast-in, .badge-pop { animation: none; } }
+
+/* Modo oscuro: las escalas de color de la paleta se reasignan para que los fondos suaves
+   (chips, ítem activo, avisos) pasen a tonos profundos y su texto a tonos claros. */
+/* texto de aviso: contraste >= 4.5 sobre orange-100 */
+:root { --warn-text: #A8420A; }
+html[data-theme="dark"] {
+  --warn-text: #F6A56F;
+  --blue-50: #002544;
+  --blue-100: #0B3F66;
+  --blue-200: #155074;
+  --blue-600: #6BBBE0;
+  --blue-700: #BADAE9;
+  --blue-900: #014776;
+  --teal-50: #053B45;
+  --teal-100: #0B4A55;
+  --teal-700: #6BC2CA;
+  --orange-100: #4A2410;
+}

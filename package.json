@@ -1,0 +1,13 @@
+{
+  "name": "mercado-patagonico",
+  "private": true,
+  "version": "0.0.1",
+  "description": "Landing (Astro) + prototipo de la app (React) de Mercado Patagónico",
+  "scripts": {
+    "install:all": "npm --prefix landing install && npm --prefix app install",
+    "dev:landing": "npm --prefix landing run dev",
+    "dev:app": "npm --prefix app run dev",
+    "build:all": "node scripts/build-all.cjs",
+    "preview": "npx --yes serve dist -l 4000"
+  }
+}
