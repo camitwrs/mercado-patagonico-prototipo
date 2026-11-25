@@ -1,7 +1,10 @@
 ---
 import Bi from './Bi.astro';
 import Logo from './Logo.astro';
+import { RUTA, UI } from '../lib/i18n.js';
 // Mismo orden que el menú y las secciones de la página.
+const { lang = 'es' } = Astro.props;
+const t = UI[lang];
 const year = new Date().getFullYear();
 const links =[['que-es', 0], ['para-quien', 2], ['como-funciona', 1], ['preguntas', 3]];
 ---
@@ -9,7 +12,7 @@ const links =[['que-es', 0], ['para-quien', 2], ['como-funciona', 1], ['pregunta
   <div class="wrap foot-in">
     <div class="foot-top">
       <a class="foot-logo" href="#top" aria-label="Mercado Patagónico"><Logo dark /></a>
-      <nav class="foot-links" aria-label="Pie de página">
+      <nav class="foot-links" aria-label={t.pie}>
         {links.map(([id, k]) => <a href={`#${id}`}><Bi f={(X) => X.nav[k]} /></a>)}
         <a href="#contacto"><Bi f={(X) => X.contact} /></a>
       </nav>
@@ -19,7 +22,9 @@ const links =[['que-es', 0], ['para-quien', 2], ['como-funciona', 1], ['pregunta
         <span class="l-es">© {year} Mercado Patagónico. Desarrollado por Latitud53. Todos los derechos reservados.</span>
         <span class="l-en">© {year} Mercado Patagónico. Developed by Latitud53. All rights reserved.</span>
       </p>
-      <span class="foot-lang" role="group" aria-label="Idioma / Language"><button type="button" data-set-lang="es" lang="es" aria-label="Español">ES</button><span aria-hidden="true">|</span><button type="button" data-set-lang="en" lang="en" aria-label="English">EN</button></span>
+      <span class="foot-lang" role="group" aria-label={t.idioma}>
+        <a href={RUTA.es} hreflang="es" lang="es" data-lang-link="es" aria-label="Español" aria-current={lang === 'es' ? 'true' : undefined}>ES</a><span aria-hidden="true">|</span><a href={RUTA.en} hreflang="en" lang="en" data-lang-link="en" aria-label="English" aria-current={lang === 'en' ? 'true' : undefined}>EN</a>
+      </span>
     </div>
   </div>
 </footer>

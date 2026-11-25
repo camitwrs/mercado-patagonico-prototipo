@@ -18,9 +18,9 @@ En la raíz del repositorio, `npm run build:all` construye la landing y la app j
 ## Qué trae
 
 - Secciones, en orden: hero, problema, ruta de abastecimiento, propuesta de valor, para quién, cómo funciona, acompañamiento y canales, preguntas y contacto, más navbar y footer.
-- Español e inglés, modo claro y oscuro (botones en el navbar y selector ES | EN en el footer; se recuerdan en el navegador), responsive.
+- Español (`/`) e inglés (`/en/`) como páginas separadas, con selector ES | EN en el navbar y el footer. Modo claro y oscuro (se recuerda en el navegador), responsive.
 - Animaciones suaves: aparición al hacer scroll, cajas flotando, rutas que fluyen, acordeón y un camión en el formulario de contacto que avanza con cada dato válido. Respeta `prefers-reduced-motion`.
-- SEO: título y descripción, vista previa para redes (`public/og.png`), datos estructurados, `robots.txt` y `sitemap.xml`. La app (`/app/`) queda fuera del índice.
+- SEO: título y descripción por idioma, `canonical` y `hreflang` entre `/` y `/en/`, vista previa para redes (`public/og.png`), datos estructurados, `robots.txt` y `sitemap.xml`. La app (`/app/`) queda fuera del índice.
 
 ## Variables de entorno
 
@@ -31,8 +31,9 @@ En la raíz del repositorio, `npm run build:all` construye la landing y la app j
 
 ## Estructura
 
-- `src/pages/index.astro` arma la página con `src/components/*`. También están `robots.txt.ts` y `sitemap.xml.ts`.
-- `src/layouts/Layout.astro` cabecera HTML: SEO, tema e idioma antes de pintar.
+- `src/components/Home.astro` arma la página completa en un idioma; `src/pages/index.astro` (español) y `src/pages/en/index.astro` (inglés) solo la llaman. También están `robots.txt.ts` y `sitemap.xml.ts`.
+- `src/layouts/Layout.astro` cabecera HTML (SEO, idioma, tema). Los componentes escriben ambos idiomas (clases `.l-es` y `.l-en`) y el layout descarta el que no corresponde al construir, así cada URL entrega solo su idioma.
+- `src/lib/i18n.js` rutas, título, descripción y etiquetas de interfaz por idioma.
 - `src/data/content.json` y `i18n.json`: todos los textos ES/EN.
 - `src/styles/tokens.css` colores (claro/oscuro) y `src/styles/landing.css` estilos. Los tokens se comparten con la app.
 - `src/lib/art.js`, `scene.js`, `scene-login.js`, `svg.js`: gráficos SVG. La app reutiliza `art.js` y `scene-login.js` (el paisaje del login).
@@ -43,4 +44,4 @@ En la raíz del repositorio, `npm run build:all` construye la landing y la app j
 
 - El formulario de contacto solo valida en el navegador; no envía datos a ningún lado.
 - Las fotos de hoteles y lodges son las de la presentación de la clienta (baja resolución); conviene pedir originales.
-- El texto en inglés comparte la URL con el español, así que los buscadores solo indexan el español.
+- La app (`/app/`) está solo en español; "Log in" en la versión en inglés lleva al mismo login.

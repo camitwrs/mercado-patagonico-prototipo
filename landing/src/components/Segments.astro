@@ -1,6 +1,12 @@
 ---
 import { Image } from 'astro:assets';
 import Bi from './Bi.astro';
+const { lang = 'es' } = Astro.props;
+const ALT_EN = {
+  urbanos: 'Hotel room with a view of the lake and the mountains',
+  lodges: 'Lodge lounge with large windows onto the landscape',
+  cadenas: 'Hotel room in the region with a picture window over the sea and the pier',
+};
 import Deco from './Deco.astro';
 import hotel from '../assets/seg/hotel.jpg';
 import lodge from '../assets/seg/lodge.jpg';
@@ -55,7 +61,7 @@ const bi = (p) => `<span class="l-es">${p[0]}</span><span class="l-en">${p[1]}</
       </div>
       <div class="sx-body">
         <div class="sx-photos">
-          {tabs.map((t, i) => <Image class="sx-img" data-on={i === 0 ? 'true' : 'false'} src={t.img} width={1024} alt={t.alt} loading="lazy" />)}
+          {tabs.map((t, i) => <Image class="sx-img" data-on={i === 0 ? 'true' : 'false'} src={t.img} width={1024} alt={lang === 'en' ? ALT_EN[t.id] : t.alt} loading="lazy" />)}
         </div>
         <div class="sx-panels">
           {tabs.map((t, i) => (

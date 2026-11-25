@@ -1,0 +1,32 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from './Nav.astro';
+import Hero from './Hero.astro';
+import Problem from './Problem.astro';
+import Route from './Route.astro';
+import Value from './Value.astro';
+import Segments from './Segments.astro';
+import Support from './Support.astro';
+import Steps from './Steps.astro';
+import Faq from './Faq.astro';
+import Contact from './Contact.astro';
+import Footer from './Footer.astro';
+
+// La página completa en un idioma. "/" la usa en español y "/en/" en inglés.
+const { lang = 'es' } = Astro.props;
+---
+<Layout lang={lang}>
+  <Nav lang={lang} />
+  <main>
+    <Hero />
+    <Problem />
+    <Route />
+    <Value />
+    <Segments lang={lang} />
+    <Steps />
+    <Support />
+    <Faq />
+    <Contact />
+  </main>
+  <Footer lang={lang} />
+</Layout>

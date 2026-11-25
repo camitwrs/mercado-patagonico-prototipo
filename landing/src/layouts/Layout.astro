@@ -5,36 +5,53 @@ import '@fontsource/ibm-plex-mono/400.css';
 import '@fontsource/ibm-plex-mono/500.css';
 import '../styles/tokens.css';
 import '../styles/landing.css';
-const { title = 'Mercado Patagónico · Abastecimiento hotelero y gastronómico', description = 'Plataforma de abastecimiento hotelero y gastronómico para Magallanes: un solo operador, múltiples proveedores, una solución integral.' } = Astro.props;
-const url = Astro.site ? new URL(Astro.url.pathname, Astro.site).href : undefined;
-const imagen = Astro.site ? new URL('/og.png', Astro.site).href : '/og.png';
+import { parse } from 'node-html-parser';
+import { LANGS, RUTA, META, UI, otro } from '../lib/i18n.js';
+
+// Una página por idioma. Los componentes escriben ambos idiomas (clases .l-es y .l-en); aquí se
+// descarta el que no corresponde, de modo que cada URL entregue solo su idioma al navegador y a los buscadores.
+const { lang = 'es' } = Astro.props;
+const m = META[lang];
+const { title, description } = m;
+
+const abs = (path) => (Astro.site ? new URL(path, Astro.site).href : undefined);
+const url = abs(RUTA[lang]);
+const imagen = Astro.site ? abs('/og.png') : '/og.png';
 const ld = JSON.stringify({
   '@context': 'https://schema.org',
   '@type': 'Organization',
   name: 'Mercado Patagónico',
   description,
-  areaServed: 'Región de Magallanes, Chile',
-  ...(Astro.site ? { url: Astro.site.href, logo: new URL('/favicon.svg', Astro.site).href } : {}),
+  inLanguage: lang,
+  areaServed: m.area,
+  ...(Astro.site ? { url: url, logo: abs('/favicon.svg') } : {}),
 });
+
+const raiz = parse(await Astro.slots.render('default'), { blockTextElements: { script: true, style: true, noscript: true, pre: true } });
+raiz.querySelectorAll('.l-' + otro(lang)).forEach((e) => e.remove());
+const contenido = raiz.toString();
 ---
 <!doctype html>
-<html lang="es" data-lang="es" data-theme="light">
+<html lang={lang} data-lang={lang} data-theme="light">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
     <meta name="robots" content="index, follow" />
     {url && <link rel="canonical" href={url} />}
+    {Astro.site && LANGS.map((l) => <link rel="alternate" hreflang={l} href={abs(RUTA[l])} />)}
+    {Astro.site && <link rel="alternate" hreflang="x-default" href={abs(RUTA.es)} />}
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Mercado Patagónico" />
-    <meta property="og:locale" content="es_CL" />
+    <meta property="og:locale" content={m.locale} />
+    <meta property="og:locale:alternate" content={META[otro(lang)].locale} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     {url && <meta property="og:url" content={url} />}
     <meta property="og:image" content={imagen} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Mercado Patagónico: abastecimiento hotelero y gastronómico para Magallanes" />
+    <meta property="og:image:alt" content={m.ogAlt} />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
@@ -48,17 +65,15 @@ const ld = JSON.stringify({
         var d = document.documentElement;
         d.classList.add('js');
         try {
-          var l = localStorage.getItem('mp-lang'), t = localStorage.getItem('mp-theme');
-          d.dataset.lang = l === 'en' ? 'en' : 'es';
-          d.lang = d.dataset.lang;
+          var t = localStorage.getItem('mp-theme');
           d.dataset.theme = t === 'dark' ? 'dark' : 'light';
         } catch (e) {}
       })();
     </script>
   </head>
   <body>
-    <a class="skip" href="#que-es">Saltar al contenido</a>
-    <slot />
+    <a class="skip" href="#que-es">{UI[lang].skip}</a>
+    <Fragment set:html={contenido} />
     <div class="toast" role="status" aria-live="polite" id="toast"></div>
     <script>
       import '../scripts/interact.js';

@@ -16,9 +16,8 @@ $$('.nav-logo, .foot-logo').forEach((a) => a.addEventListener('click', (e) => {
 }));
 
 // idioma y tema
-const setLang = (l) => { root.dataset.lang = l; root.lang = l; store('mp-lang', l); };
-$$('[data-lang-toggle]').forEach((b) => b.addEventListener('click', () => setLang(root.dataset.lang === 'es' ? 'en' : 'es')));
-$$('[data-set-lang]').forEach((b) => b.addEventListener('click', () => setLang(b.dataset.setLang)));
+// el idioma es la URL: los enlaces ES/EN llevan a / o /en/ (se recuerda la última elección)
+$$('[data-lang-link]').forEach((a) => a.addEventListener('click', () => store('mp-lang', a.dataset.langLink)));
 $$('[data-theme-toggle]').forEach((b) => b.addEventListener('click', () => {
   const t = root.dataset.theme === 'dark' ? 'light' : 'dark';
   root.dataset.theme = t; store('mp-theme', t);
@@ -114,8 +113,9 @@ $$('form[data-contact]').forEach((form) => {
     const es = ['Ya salió de Santiago.', 'Pasando por Puerto Montt.', 'Casi en Magallanes.', 'Llegó. Envía el mensaje.'];
     const en = ['Left Santiago.', 'Passing Puerto Montt.', 'Almost in Magallanes.', 'Arrived. Send the message.'];
     trk.classList.toggle('started', n > 0 || !!sent);
-    $('[data-trk-es]', trk).textContent = sent ? 'Mensaje en ruta.' : es[Math.max(n - 1, 0)];
-    $('[data-trk-en]', trk).textContent = sent ? 'Message on its way.' : en[Math.max(n - 1, 0)];
+    const ingles = root.lang === 'en';
+    const lbl = $('[data-trk-es]', trk) || $('[data-trk-en]', trk);
+    if (lbl) lbl.textContent = sent ? (ingles ? 'Message on its way.' : 'Mensaje en ruta.') : (ingles ? en : es)[Math.max(n - 1, 0)];
   };
   fields.forEach((f) => {
     const input = $('input, select', f);

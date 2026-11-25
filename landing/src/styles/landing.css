@@ -440,9 +440,9 @@ html[data-theme="dark"] .pl-row:hover h3 { color: var(--blue-300); }
 .foot-bot { display: flex; align-items: center; justify-content: space-between; gap: 16px 24px; flex-wrap: wrap; padding-top: 24px; border-top: 1px solid rgba(234,243,249,.18); }
 .foot-bot p { font-size: 14px; opacity: .75; }
 .foot-lang { display: inline-flex; gap: 4px; align-items: center; font-weight: 600; font-size: 14px; }
-.foot-lang button { opacity: .6; padding: 2px 4px; min-height: 24px; min-width: 24px; border-bottom: 2px solid transparent; transition: opacity .25s, border-color .25s; }
-.foot-lang button:hover { opacity: 1; }
-html[data-lang="es"] .foot-lang [data-set-lang="es"], html[data-lang="en"] .foot-lang [data-set-lang="en"] { opacity: 1; border-color: currentColor; }
+.foot-lang a { display: inline-flex; align-items: center; justify-content: center; opacity: .6; padding: 2px 4px; min-height: 24px; min-width: 24px; border-bottom: 2px solid transparent; transition: opacity .25s, border-color .25s; }
+.foot-lang a:hover { opacity: 1; }
+.foot-lang a[aria-current] { opacity: 1; border-color: currentColor; }
 @media (max-width: 700px) { .foot-in { padding-block: 40px 28px; gap: 28px; } .foot-top { flex-direction: column; align-items: flex-start; } .foot-links { flex-direction: column; gap: 2px; } .foot-links a { padding: 10px 0; } .foot-bot { flex-direction: column; align-items: flex-start; } }
 
 .toast { position: fixed; left: 50%; bottom: 24px; transform: translate(-50%, 30px); opacity: 0; pointer-events: none; z-index: 300; background: #002544; color: #fff; padding: 12px 20px; border-radius: 10px; font: 500 14px/1.4 'Noto Sans Variable', sans-serif; box-shadow: 0 12px 32px rgba(0,0,0,.3); transition: opacity .3s, transform .3s; max-width: calc(100vw - 32px); text-align: center; }

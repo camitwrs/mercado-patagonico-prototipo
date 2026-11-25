@@ -23,6 +23,7 @@
     "@fontsource/ibm-plex-mono": "^5.3.0",
     "@fontsource/ibm-plex-sans": "^5.3.0",
     "@fontsource/ibm-plex-sans-condensed": "^5.3.0",
-    "astro": "^7.4.13"
+    "astro": "^7.4.13",
+    "node-html-parser": "^9.0.7"
   }
 }
