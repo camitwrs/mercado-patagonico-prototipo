@@ -5,6 +5,6 @@
   "outputDirectory": "dist",
   "cleanUrls": true,
   "rewrites": [
-    { "source": "/app/:path((?!assets/).*)", "destination": "/app/index.html" }
+    { "source": "/app/:path*", "destination": "/app/index.html" }
   ]
 }
